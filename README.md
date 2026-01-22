@@ -3,7 +3,7 @@
 A privacy-focused, "niche" snippet manager designed for developers and power users who deal with temporary data. 
 
 ### 🚀 Live Demo
-[https://ibrahimmarvi1.github.io/ephemeral-snippets/]
+[https://imnichecode.github.io/ephemeral-snippets/]
 
 ### ✨ Key Features
 * **Self-Destruct Logic:** Set snippets to expire in 1, 12, or 24 hours.
