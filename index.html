@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ephemeral Snippets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ephemeral Snippets</h1>
+        <p class="subtitle">Temporary storage that cleans itself up.</p>
+        
+        <div class="input-section">
+           <div id="snippetInput" contenteditable="true" placeholder="Paste text or images here..."></div>
+            <div class="controls">
+                <select id="expirySelect">
+                    <option value="60000">1 Minute (Test)</option>
+                    <option value="3600000">1 Hour</option>
+                    <option value="43200000">12 Hours</option>
+                    <option value="86400000">24 Hours</option>
+                </select>
+                <button id="saveBtn">Save Snippet</button>
+            </div>
+        </div>
+
+        <div id="snippetList" class="snippet-grid"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

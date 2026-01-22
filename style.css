@@ -1,0 +1,153 @@
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.container { 
+    width: 100%; 
+    max-width: 600px; 
+}
+
+h1 { margin-bottom: 5px; }
+
+.subtitle { 
+    color: #94a3b8; 
+    margin-bottom: 20px; 
+    font-size: 0.9rem; 
+}
+
+/* THE NEW INPUT BOX (Replaces Textarea) */
+#snippetInput {
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-y: auto;
+    text-align: left;
+    outline: none;
+}
+
+#snippetInput:focus {
+    border-color: #3b82f6;
+}
+
+/* Placeholder fix for contenteditable */
+#snippetInput:empty:before {
+    content: attr(placeholder);
+    color: #64748b;
+}
+
+.controls {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+select, button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background: #1e293b;
+    color: white;
+    cursor: pointer;
+}
+
+button {
+    background: #3b82f6;
+    border: none;
+    font-weight: 600;
+}
+
+button:hover { background: #2563eb; }
+
+/* THE SNIPPET CARDS */
+.snippet-grid { margin-top: 30px; }
+
+.snippet-card {
+    background: #1e293b;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ef4444;
+    filter: blur(4px); /* Privacy Blur */
+    transition: filter 0.2s ease;
+    user-select: text; /* Allows you to highlight and copy */
+}
+
+.snippet-card:hover {
+    filter: blur(0); /* Reveals on hover */
+}
+
+/* IMAGE FIX: Keeps pasted images from breaking the layout */
+.snippet-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.time-left {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    display: block;
+    margin-bottom: 8px;
+    font-family: monospace;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.copy-btn, .delete-btn {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.copy-btn {
+    background: #3b82f622;
+    color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.copy-btn:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+.delete-btn {
+    background: #ef444422;
+    color: #ef4444;
+    border-color: #ef4444;
+}
+
+.delete-btn:hover {
+    background: #ef4444;
+    color: white;
+}
+
+/* Ensure content stays readable for the copy function */
+.content {
+    word-wrap: break-word;
+    margin-top: 5px;
+}
