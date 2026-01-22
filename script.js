@@ -1,3 +1,9 @@
+/* * Project: Ephemeral Snippets
+ * Author: [Ibrahim Marvi]
+ * URL: https://imnichecode.github.io/ephemeral-snippets/
+ * License: MIT
+ */
+
 const saveBtn = document.getElementById('saveBtn');
 const snippetInput = document.getElementById('snippetInput');
 const expirySelect = document.getElementById('expirySelect');
